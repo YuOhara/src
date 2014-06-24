@@ -1,0 +1,11 @@
+<launch>
+  <node name="sample" pkg="pr2_learn" type="pr2_learn"
+	respawn="false" output="screen" launch-prefix="nice -n 10">
+    <remap from="image_rect_color" to="openni/rgb/image_rect_color" />
+  </node>
+  <group ns="/openni/rgb/">
+  <node name="proc" pkg="image_proc" type="image_proc" />
+  </group>
+  <!-- <include file="$(find openni_launch)/launch/openni.launch" /> -->
+     
+</launch>
