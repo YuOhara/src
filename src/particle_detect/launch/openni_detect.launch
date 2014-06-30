@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="sample" pkg="particle_detect" type="particle_detect"
+respawn="false" output="screen" launch-prefix="nice -n 10">
+    <remap from="image_rect_color" to="camera/rgb/image_rect_color" />
+  </node>
+  
+</launch>
